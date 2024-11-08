@@ -1,3 +1,5 @@
+import 'package:fintech/screens/home_screen.dart';
+import 'package:fintech/screens/signin_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../data/onboarding_data.dart';
@@ -58,7 +60,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                child: ElevatedButton(onPressed: () {  },
+                child: GestureDetector(onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SignInScreen()));
+                },
                 child: Text("Get Started".toUpperCase())),
               ),
             ),
