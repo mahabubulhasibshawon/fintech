@@ -1,3 +1,4 @@
+import 'package:fintech/screens/email_verification.dart';
 import 'package:fintech/screens/home_screen.dart';
 import 'package:fintech/screens/signin_screen.dart';
 import 'package:flutter/material.dart';
@@ -61,7 +62,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
                 child: GestureDetector(onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SignInScreen()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> EmailVerification()));
                 },
                 child: Text("Get Started".toUpperCase())),
               ),
