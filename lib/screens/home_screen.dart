@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/info_box.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -30,18 +33,65 @@ class HomeScreen extends StatelessWidget {
                 border: Border.all(color: Colors.white),
                 borderRadius: BorderRadius.circular(20)
               ),
-              child: Row(
-                children: [
-                  Column(
-                    children: [
-                      Text('147570', style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold, color: Colors.white),),
-                      Text('Mahabub Ul Hasib Shawon', style: TextStyle(fontSize: 24, color: Colors.white),),
-                    ],
-                  )
-                ],
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('WALLET BALANCE', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                          SizedBox(height: 10),
+                          Text('147570', style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold, color: Colors.white),),
+                          Text('Mahabub Ul Hasib Shawon', style: TextStyle(fontSize: 16, color: Colors.white),),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.plus_circle_fill, color: Colors.white,))
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
-          )
+          ),
+          SizedBox(height: 20,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              InfoBox(
+                icon: Icons.camera_alt,
+                title: "AICB NAIRA",
+                amount: "1,500,034.00",
+                description: "= NGN 1,900,034.00",
+                backgroundColor: Colors.black,
+              ),
+              const SizedBox(width: 12),
+              InfoBox(
+                icon: Icons.agriculture,
+                title: "AICB TO HARVEST",
+                amount: "5,678.00",
+                description: "= NGN 5,678.00",
+                backgroundColor: Color(0xff5f49db),
+              ),
+              const SizedBox(width: 12),
+              InfoBox(
+                icon: Icons.folder,
+                title: "AICB NAIRA",
+                amount: "1,500,034.00",
+                description: "= NGN 1,900,034.00",
+                backgroundColor: Color(0xff7cc5e3),
+              ),
+            ],
+          ),
         ],
       ),
     );
