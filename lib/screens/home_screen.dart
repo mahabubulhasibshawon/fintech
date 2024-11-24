@@ -107,6 +107,22 @@ class HomeScreen extends StatelessWidget {
                   child: Text('Portfolio Overview', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24, color: Color(0xff4b3472)),),
                 ),
                 Divider(),
+                Container(
+                  height: Height * .08,
+                  width: Width * .9,
+                  decoration: BoxDecoration(
+                    color: Colors.blueAccent
+                  ),
+                  child: Row(),
+                ),
+                Container(
+                  height: Height * .08,
+                  width: Width * .9,
+                  decoration: BoxDecoration(
+                    color: Colors.blueAccent
+                  ),
+                  child: Row(),
+                ),
               ],
             ),
           )
